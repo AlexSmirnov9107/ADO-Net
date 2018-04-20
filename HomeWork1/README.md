@@ -1,12 +1,12 @@
-﻿Спроектировать в mdf файле (локальном файле БД) таблицы со связями Person, Car, Order. Скинуть в текстовом файле команды на создание таблиц со связями.
+﻿# Спроектировать в mdf файле (локальном файле БД) таблицы со связями Person, Car, Order. Скинуть в текстовом файле команды на создание таблиц со связями.
 
-CREATE TABLE [dbo].[person](
+1.  CREATE TABLE [dbo].[person](
 	[id] [int] IDENTITY(1,1) NOT NULL,
 	[fio] [varchar](200) NULL,
 	[phone] [varchar](50) NULL,
  CONSTRAINT [PK_person] PRIMARY KEY 
 )
-CREATE TABLE [dbo].[cars] (
+2.  CREATE TABLE [dbo].[cars] (
   [id] int IDENTITY(1,1) NOT NULL,
   [carname] int NULL,
   [model] varchar(255) NULL,
@@ -14,7 +14,7 @@ CREATE TABLE [dbo].[cars] (
   PRIMARY KEY CLUSTERED ([id]),
 )
 
-CREATE TABLE [dbo].[orders] (
+3.  CREATE TABLE [dbo].[orders] (
   [id] int IDENTITY(1,1) NOT NULL,
   [userid] int NULL,
   [carid] int NULL,
